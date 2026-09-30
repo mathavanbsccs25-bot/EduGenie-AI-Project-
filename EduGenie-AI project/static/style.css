@@ -1,0 +1,236 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family:
+        Inter,
+        Arial,
+        sans-serif;
+
+    background: #f5f7fb;
+    color: #172033;
+}
+
+.container {
+    width: min(1100px, 92%);
+    margin: auto;
+}
+
+.hero {
+    padding: 55px 0 45px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #16213e,
+            #304ffe
+        );
+
+    color: white;
+}
+
+.brand {
+    font-weight: 800;
+    font-size: 1.25rem;
+    margin-bottom: 35px;
+}
+
+h1 {
+    margin: 0 0 12px;
+
+    font-size:
+        clamp(
+            2.2rem,
+            6vw,
+            4.3rem
+        );
+}
+
+.hero p {
+    max-width: 700px;
+
+    line-height: 1.6;
+
+    font-size: 1.05rem;
+}
+
+.status {
+    display: inline-block;
+
+    margin-top: 18px;
+
+    padding:
+        7px 12px;
+
+    border-radius: 999px;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.15
+        );
+
+    font-size: 0.85rem;
+}
+
+.grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 22px;
+
+    padding:
+        35px 0 60px;
+}
+
+.card {
+    background: white;
+
+    border-radius: 18px;
+
+    padding: 24px;
+
+    box-shadow:
+        0 8px 28px
+        rgba(
+            20,
+            35,
+            70,
+            0.08
+        );
+}
+
+.wide {
+    grid-column: 1 / -1;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+textarea,
+input,
+select {
+
+    width: 100%;
+
+    border:
+        1px solid #d9dfeb;
+
+    border-radius: 12px;
+
+    padding: 13px;
+
+    font: inherit;
+
+    margin: 7px 0;
+
+    background: #fbfcff;
+}
+
+textarea {
+    min-height: 145px;
+
+    resize: vertical;
+}
+
+button {
+
+    border: 0;
+
+    border-radius: 12px;
+
+    padding:
+        12px 18px;
+
+    background: #304ffe;
+
+    color: white;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    margin-top: 8px;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+.result,
+.quiz-result {
+
+    margin-top: 18px;
+
+    padding: 15px;
+
+    border-radius: 12px;
+
+    background: #f2f5ff;
+
+    white-space: pre-wrap;
+
+    line-height: 1.65;
+
+    min-height: 30px;
+}
+
+.two-col {
+
+    display: grid;
+
+    grid-template-columns:
+        2fr 1fr;
+
+    gap: 10px;
+}
+
+.quiz-question {
+
+    padding:
+        15px 0;
+
+    border-bottom:
+        1px solid #e7eaf0;
+}
+
+.quiz-question:last-child {
+    border-bottom: 0;
+}
+
+.option {
+
+    margin: 7px 0;
+
+    padding: 10px;
+
+    background: white;
+
+    border:
+        1px solid #e1e5ef;
+
+    border-radius: 9px;
+}
+
+
+@media (max-width: 760px) {
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .wide {
+        grid-column: auto;
+    }
+
+    .two-col {
+        grid-template-columns: 1fr;
+    }
+}

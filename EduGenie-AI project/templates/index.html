@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        EduGenie — AI Learning Assistant
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="/static/style.css"
+    >
+
+</head>
+
+<body>
+
+<header class="hero">
+
+    <div class="container">
+
+        <div class="brand">
+            🎓 EduGenie
+        </div>
+
+        <h1>
+            Learn smarter with AI.
+        </h1>
+
+        <p>
+            Ask questions, simplify concepts,
+            create quizzes, summarize notes,
+            and build a personalized learning path.
+        </p>
+
+        <div
+            id="status"
+            class="status"
+        >
+            Checking backend...
+        </div>
+
+    </div>
+
+</header>
+
+
+<main class="container grid">
+
+
+    <!-- ASK -->
+
+    <section class="card">
+
+        <h2>
+            Ask a Question
+        </h2>
+
+        <textarea
+            id="askInput"
+            placeholder="Example: What is object-oriented programming?"
+        ></textarea>
+
+        <button onclick="askQuestion()">
+            Ask EduGenie
+        </button>
+
+        <div
+            id="askResult"
+            class="result"
+        ></div>
+
+    </section>
+
+
+    <!-- EXPLAIN -->
+
+    <section class="card">
+
+        <h2>
+            Explain a Topic
+        </h2>
+
+        <input
+            id="topicInput"
+            placeholder="Example: Photosynthesis"
+        >
+
+        <select id="levelInput">
+
+            <option>
+                beginner
+            </option>
+
+            <option>
+                intermediate
+            </option>
+
+            <option>
+                advanced
+            </option>
+
+        </select>
+
+        <button onclick="explainTopic()">
+            Explain
+        </button>
+
+        <div
+            id="explainResult"
+            class="result"
+        ></div>
+
+    </section>
+
+
+    <!-- SUMMARY -->
+
+    <section class="card wide">
+
+        <h2>
+            Summarize Notes
+        </h2>
+
+        <textarea
+            id="summaryInput"
+            placeholder="Paste your study notes here..."
+        ></textarea>
+
+        <button onclick="summarizeText()">
+            Summarize
+        </button>
+
+        <div
+            id="summaryResult"
+            class="result"
+        ></div>
+
+    </section>
+
+
+    <!-- QUIZ -->
+
+    <section class="card wide">
+
+        <h2>
+            Generate 3-Question Quiz
+        </h2>
+
+        <textarea
+            id="quizInput"
+            placeholder="Paste a passage or notes here..."
+        ></textarea>
+
+        <button onclick="generateQuiz()">
+            Generate Quiz
+        </button>
+
+        <div
+            id="quizResult"
+            class="quiz-result"
+        ></div>
+
+    </section>
+
+
+    <!-- LEARNING PATH -->
+
+    <section class="card wide">
+
+        <h2>
+            Personalized Learning Path
+        </h2>
+
+        <div class="two-col">
+
+            <input
+                id="learnTopic"
+                placeholder="Topic, e.g. Python"
+            >
+
+            <select id="learnLevel">
+
+                <option>
+                    beginner
+                </option>
+
+                <option>
+                    intermediate
+                </option>
+
+                <option>
+                    advanced
+                </option>
+
+            </select>
+
+        </div>
+
+        <input
+            id="learnGoal"
+            placeholder="Goal, e.g. prepare for an exam"
+        >
+
+        <button onclick="learningPath()">
+            Build Learning Path
+        </button>
+
+        <div
+            id="learnResult"
+            class="result"
+        ></div>
+
+    </section>
+
+</main>
+
+
+<script src="/static/app.js"></script>
+
+</body>
+
+</html>
